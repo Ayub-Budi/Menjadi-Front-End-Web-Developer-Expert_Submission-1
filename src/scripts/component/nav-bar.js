@@ -114,6 +114,7 @@ class NavBar extends HTMLElement {
         display: flex;
       }
       ul {
+        width: 40%;
         position: absolute;
         right:  0;
         top: 0;
