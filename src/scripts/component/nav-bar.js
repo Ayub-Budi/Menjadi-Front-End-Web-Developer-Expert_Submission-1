@@ -123,11 +123,11 @@ class NavBar extends HTMLElement {
         flex-direction: column;
         background-color: #461111;
         z-index: -2;
-        transform: translateX(100%);
+        transform: translate(0, -100vh);
       }
     
       ul.slide {
-        transform: translateX(0);
+        transform: translate(0,0)
       }
     }
   </style>
