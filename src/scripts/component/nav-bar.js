@@ -40,7 +40,6 @@ class NavBar extends HTMLElement {
     .nav-input {
       display: inline;
       margin: 10px;
-      width: 40%;
     }
     
     button {
@@ -59,8 +58,10 @@ class NavBar extends HTMLElement {
     }
     
     input {
-      width: 150px;
-      height: 44px;
+      width: 50%;
+      display: inline-block;
+      min-width: 44px;
+      min-height: 44px;
     }
     
     ul {
@@ -73,7 +74,12 @@ class NavBar extends HTMLElement {
     ul li a {
       color: white;
       text-decoration: none;
-      font-size: 35px;
+    }
+
+    a {
+      display: inline-block;
+      min-width: 44px;
+      min-height: 44px;
     }
     
     ul li a:hover {
@@ -93,10 +99,7 @@ class NavBar extends HTMLElement {
     
     /* responsive */
     @media screen and (max-width: 768px) {
-      input {
-        width: 100px;
-        height: 44px;
-      }
+
       ul {
         width: 70%;
       }
@@ -113,6 +116,7 @@ class NavBar extends HTMLElement {
       .menu {
         display: flex;
       }
+      
       ul {
         width: 40%;
         position: absolute;
