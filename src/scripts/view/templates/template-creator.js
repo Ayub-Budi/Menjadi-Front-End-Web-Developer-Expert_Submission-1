@@ -3,7 +3,16 @@ const createRestoDetailTemplate = (resto) => `
   <h1>${resto.name}</h1>
     <div class="detail-resto">
       <div class="poster">
-      <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}"alt="${resto.name}" tabindex="0"/>
+        <figure>
+          <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}"alt="${resto.name}" tabindex="0"/>
+          <figcaption>${resto.categories.map((category) => `
+          <span>${category.name}</span>
+        `).join('')}
+        ⭐️ ${resto.rating}</figcaption>
+          
+          <figcaption>Alamat : ${resto.address}</figcaption>
+
+        </figure>
       </div>
 
       <div class="deskripsi">
@@ -11,9 +20,7 @@ const createRestoDetailTemplate = (resto) => `
         <p tabindex="0">
         ${resto.description}
         </p>
-        <h2>
-        ${resto.address}
-        </h2>
+
         <p>
         ${resto.categories.map((category) => `
               <span>${category.name}</span>
@@ -40,6 +47,20 @@ const createRestoDetailTemplate = (resto) => `
               `).join('')}
             <ul>
         </div>
+      </div>
+    </div>
+
+    <div>
+      <h1>Customer Reviews</h1>
+      <div class="input-Review">
+        <form action="">
+          <label for="name">nama</label>
+          <input type="text" id="name" name="Nama" placeholder="Nama..">
+
+          <label for="review">Review</label>
+          <input type="text" id="review" name="Review" placeholder="Review..">
+          <input type="submit" value="Submit">
+        </form>
       </div>
     </div>
 

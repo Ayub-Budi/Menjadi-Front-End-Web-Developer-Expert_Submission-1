@@ -41,7 +41,17 @@
     transform: translate(0, 0);
   }
 
-  .card {
+  .card, .list-menu, .detail-resto .deskripsi, .input-Review{
     width: 100%;
+  }
+
+  .detail-resto{
+    flex-direction: column;
+    
+  }
+
+  .menu .daftar-menu{
+    flex-direction: column;
+
   }
 }

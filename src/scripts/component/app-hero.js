@@ -12,8 +12,8 @@ class AppHero extends HTMLElement {
     this.shadowDOM.innerHTML = `
           <style>
               * {
-                  margin: 0;
-                  padding: 0;
+                 
+                  
                   box-sizing: border-box;
               }
               :host{
@@ -32,11 +32,12 @@ class AppHero extends HTMLElement {
                 padding-top: 10%;
               }
           </style>
+
           <div class="hero-text">
             <h1 tabindex="0">Yubzz Restaurant</h1>
             <p tabindex="0">
                 Saatnya untuk memulai perjalanan kuliner Anda dan menjelajahi
-                restoran-restoran lokal yang akan memanjakan lidah Anda.
+                restoran-restoran lokal.
             </p>
           </div>
           `;
