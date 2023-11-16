@@ -1,7 +1,7 @@
 class NavBar extends HTMLElement {
   constructor() {
     super();
-    this.shadowDOM = this.attachShadow({ mode: "open" });
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -11,10 +11,6 @@ class NavBar extends HTMLElement {
   set clickEvent(event) {
     this._clickEvent = event;
     this.render();
-  }
-
-  get value() {
-    return this.shadowDOM.querySelector("#searchElement").value;
   }
 
   render() {
@@ -138,40 +134,26 @@ class NavBar extends HTMLElement {
   </style>
 
   <div class="nav-input">
-  <input placeholder="Search Restaurant" id="searchElement" type="search">
-  <button id="searchButtonElement" type="submit">Search</button>
+  <h1>yubzz</h1>
   </div>
-  <ul>
-    <li><a href="#">Home</a></li>
+  <ul id="navigationDrawer">
+    <li><a href="#/now-playing">Home</a></li>
     <li><a href="#favorite">Favorite</a></li>
     <li><a href="https://www.linkedin.com/in/ayub09/">About Us</a></li>
   </ul>
-  <button class="menu" >
+  <button class="menu" id="hamburgerButton">
     ☰
   </button>
 
         `;
 
-    this.shadowDOM
-      .querySelector("#searchButtonElement")
-      .addEventListener("click", this._clickEvent);
+    // const menu = this.shadowDOM.querySelector('.menu');
+    // const nav = this.shadowDOM.querySelector('ul');
 
-    const hamburgerButtonElement = this.shadowDOM.querySelector(
-      "#searchButtonElement"
-    );
-    const drawerElement = this.shadowDOM.querySelector(".nav-input");
-    hamburgerButtonElement.addEventListener("click", (event) => {
-      drawerElement.classList.toggle("open");
-      event.stopPropagation();
-    });
-
-    const menu = this.shadowDOM.querySelector(".menu");
-    const nav = this.shadowDOM.querySelector("ul");
-
-    menu.addEventListener("click", function () {
-      nav.classList.toggle("slide");
-    });
+    // menu.addEventListener('click', function () {
+    //   nav.classList.toggle('slide');
+    // });
   }
 }
 
-customElements.define("nav-bar", NavBar);
+customElements.define('nav-bar', NavBar);
