@@ -13,10 +13,73 @@ main {
   padding: 20px;
 }
 
+app-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+app-list-faforit{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+/* conten */
+/* daftar */
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* card */
+.card {
+  width: 25%;
+  position: relative;
+  z-index: -1;
+  padding: 10px;
+}
+.card-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.kotak {
+  position: absolute;
+  top: 8px;
+  height: 5%;
+  background-color: #b3541e;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.deskripsi {
+  padding: 10px;
+}
 /* footer */
 footer {
   padding: 20px;
   color: white;
   background-color: #461111;
   text-align: center;
+}
+
+/* skip conten */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+ 
+.skip-link:focus {
+   top: 0;
 }
