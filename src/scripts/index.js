@@ -3,6 +3,7 @@ import '../styles/content.css';
 import '../styles/main.css';
 import '../styles/navbar.css';
 import '../styles/responsive.css';
+import swRegister from './utils/sw-register';
 
 import './component/app-hero';
 
@@ -20,6 +21,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
 
 console.log('Hello Coders! :)');

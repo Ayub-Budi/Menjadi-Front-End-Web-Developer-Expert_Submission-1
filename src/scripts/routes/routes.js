@@ -8,7 +8,5 @@ const routes = {
   '/detail/:id': Detail,
   '/like': Like,
 };
-console.log('berikut data InfoResto');
-console.log(InfoResto);
 
 export default routes;
