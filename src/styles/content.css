@@ -1,110 +1,117 @@
 /* daftar */
 .list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0px;
-  }
-  /* card */
-  .card {
-    width: 23%;
-    z-index: 1;
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-  }
-  
-  .card img {
-    width: 100%;
-  }
-  
-  .rating {
-    position: absolute;
-    top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px;
+}
+/* card */
+.card {
+  width: 23%;
+  z-index: 1;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
 
-    padding: 5px;
-    background-color: #b3541e;
-    color: aliceblue;
-    font-weight: bold;
-  }
+.card a{
+  color: black;
+  text-decoration: none;
+}
 
-  .poster{
-    position: relative;
-    margin: 0 auto;
-  }
-  
-  .deskripsi {
-    padding: 10px;
-  }
-  
-  .paragraf {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-  }
-  .kota {
-    font-size: 20px;
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1;
-    width: 100%;
-  }
-  
-  .name {
-    font-size: 25px;
-  }
-  
-  .name a:hover {
-    color: #b3541e;
-  }
+.card img {
+  width: 100%;
+}
+
+.rating {
+  position: absolute;
+  top: 8px;
+
+  padding: 5px;
+  background-color: #b3541e;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.poster {
+  position: relative;
+  margin: 0 auto;
+}
+
+.deskripsi {
+  padding: 10px;
+}
+
+.paragraf {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.kota {
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+}
+
+.name {
+  font-size: 25px;
+}
+
+.name a:hover {
+  color: #b3541e;
+}
 /* detail content */
-.detail-resto{
+.detail-resto {
   display: flex;
 }
 /* .detail-resto .poster{
   
 } */
-.detail-resto img{
+.detail-resto img {
   width: 100%;
   max-width: 400px;
 }
 
-.detail-resto .deskripsi{
+.detail-resto .deskripsi {
   width: 50%;
 }
 
-.menu{
+.menu {
   display: flex;
   justify-content: center;
 }
-.menu .daftar-menu{
+.menu .daftar-menu {
   display: flex;
   justify-content: space-around;
   padding: 30px;
   width: 100%;
 }
 
-.list-menu{
+.list-menu {
   padding: 10px;
   box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.445);
   border-radius: 10%;
   width: 45%;
 }
 
-
 /* Input Review */
 .input-Review {
+  display: flex;
+  justify-content: center;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
   width: 45%;
 }
 
-.input-Review input[type=text], select {
+.input-Review input[type="text"],
+select {
   width: 100%;
   min-width: 44px;
   min-height: 44px;
@@ -116,7 +123,7 @@
   box-sizing: border-box;
 }
 
-.input-Review input[type=submit] {
+.input-Review input[type="submit"] {
   width: 100%;
   min-width: 44px;
   min-height: 44px;
@@ -129,7 +136,7 @@
   cursor: pointer;
 }
 
-.input-Review input[type=submit]:hover {
+.input-Review input[type="submit"]:hover {
   background-color: #461111;
 }
 
@@ -141,13 +148,13 @@
   align-items: center;
   justify-content: center;
   background-color: #db0000;
-  
+
   position: fixed;
   bottom: 16px;
   right: 16px;
   border-radius: 50%;
   border: 0;
-  
+
   font-size: 18px;
   color: white;
   cursor: pointer;
@@ -155,15 +162,15 @@
 
 /* skip content */
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: #bf1722;
-    color: white;
-    padding: 8px;
-    z-index: 100;
-  }
-  
-  .skip-link:focus {
-    top: 0;
-  }
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}

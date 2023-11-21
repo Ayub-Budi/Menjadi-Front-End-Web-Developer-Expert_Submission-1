@@ -1,12 +1,14 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantSource from '../../data/resturant-source';
 import { createRestoDetailTemplate } from '../templates/template-creator';
+import PostReview from '../../utils/post-review';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
     return `
     <div id="restos" class="list"></div>
+    <div id="detail-review"></div>
     <div id="likeButtonContainer"></div>
     `;
   },
@@ -26,6 +28,24 @@ const Detail = {
         city: resto.restaurant.city,
         description: resto.restaurant.description,
       },
+    });
+
+    const btnSubmit = document.querySelector('#submit');
+    const nameInput = document.querySelector('#name-review');
+    const reviewInput = document.querySelector('#review');
+
+    btnSubmit.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (nameInput.value === '' || reviewInput.value === '') {
+        // eslint-disable-next-line no-alert
+        alert('Inputan tidak boleh ada yang kosong');
+        nameInput.value = '';
+        reviewInput.value = '';
+      } else {
+        PostReview(url, nameInput.value, reviewInput.value);
+        nameInput.value = '';
+        reviewInput.value = '';
+      }
     });
   },
 };

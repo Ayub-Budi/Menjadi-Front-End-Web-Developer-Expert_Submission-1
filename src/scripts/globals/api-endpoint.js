@@ -2,7 +2,7 @@ import CONFIG from './config';
 
 const API_ENDPOINT = {
   INFO: `${CONFIG.BASE_URL}/list`,
-  SERCH: `${CONFIG.BASE_URL}/search`,
+  POST_REVIEW: `${CONFIG.BASE_URL}/review`,
   DETAIL: (id) => `${CONFIG.BASE_URL}/detail/${id}`,
 };
 

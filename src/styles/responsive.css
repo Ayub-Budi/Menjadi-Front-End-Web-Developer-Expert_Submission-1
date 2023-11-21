@@ -41,8 +41,12 @@
     transform: translate(0, 0);
   }
 
-  .card, .list-menu, .detail-resto .deskripsi, .input-Review{
+  .card, .list-menu, .detail-resto .deskripsi{
     width: 100%;
+  }
+
+  .input-Review{
+    width: 90%;
   }
 
   .detail-resto{
