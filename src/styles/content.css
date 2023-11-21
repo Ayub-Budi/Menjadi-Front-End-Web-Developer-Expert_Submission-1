@@ -70,9 +70,7 @@
 .detail-resto {
   display: flex;
 }
-/* .detail-resto .poster{
-  
-} */
+
 .detail-resto img {
   width: 100%;
   max-width: 400px;
@@ -107,9 +105,12 @@
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  width: 45%;
+ 
 }
 
+.input-Review form{
+  width: 45%;
+}
 .input-Review input[type="text"],
 select {
   width: 100%;
@@ -138,6 +139,29 @@ select {
 
 .input-Review input[type="submit"]:hover {
   background-color: #461111;
+}
+
+/* hasil review */
+.hasil-review{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hasil-review .review-item{
+  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.445);
+  border-radius: 5%;
+  padding: 10px;
+  width: 300px;
+}
+
+.hasil-review .review-item .review-header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #ccc;
+  background-color: #b3541e;
+  padding: 5px;
 }
 
 /* like */
