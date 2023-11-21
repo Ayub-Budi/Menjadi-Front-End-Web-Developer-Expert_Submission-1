@@ -1,24 +1,35 @@
 @media screen and (max-width: 1024px) {
+  .list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   nav ul {
     width: 70%;
   }
 
-  .card {
-    width: 30%;
+  .hasil-review {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .list {
+    grid-template-columns: 1fr 1fr;
+  }
   nav ul {
     width: 70%;
   }
 
-  .card {
-    width: 45%;
+  .hasil-review {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 576px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+
   nav .menu {
     display: flex;
   }
@@ -41,21 +52,24 @@
     transform: translate(0, 0);
   }
 
-  .card, .list-menu, .detail-resto .deskripsi{
+  .list-menu,
+  .detail-resto .deskripsi {
     width: 100%;
   }
 
-  .input-Review form{
+  .input-Review form {
     width: 100%;
   }
 
-  .detail-resto{
+  .detail-resto {
     flex-direction: column;
-    
   }
 
-  .menu .daftar-menu{
+  .menu .daftar-menu {
     flex-direction: column;
+  }
 
+  .hasil-review {
+    grid-template-columns: 1fr;
   }
 }

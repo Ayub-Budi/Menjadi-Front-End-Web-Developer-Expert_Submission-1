@@ -44,21 +44,9 @@ const createRestoDetailTemplate = (resto) => `
       </div>
     </div>
 
+    <h2>Reviews</h2>
+
     <div>
-      <h2>Customer Reviews</h2>
-      <div class="hasil-review">
-        ${resto.customerReviews.map((review) => `
-          <div class="review-item">
-            <div class="review-header">
-              <p class="review-name"><i title="restaurant" class="fa fa-user-circle" style="font-size:1.3em;"></i>&nbsp;${review.name}</p>
-              <p class="review-date">${review.date}</p>
-            </div>
-            <div class="review-body">
-              ${review.review}
-            </div>
-          </div>
-        `).join('')}
-      </div>
       <div class="input-Review">
         <form action="">
           <label for="name">nama</label>
@@ -70,6 +58,22 @@ const createRestoDetailTemplate = (resto) => `
         </form>
       </div>
     </div>
+
+    <h2>Customer Reviews</h2>
+
+    <div class="hasil-review">
+    ${resto.customerReviews.map((review) => `
+      <div class="review-item">
+        <div class="review-header">
+          <p class="review-name"><i title="restaurant" class="fa fa-user-circle" style="font-size:1.3em;"></i>&nbsp;${review.name}</p>
+          <p class="review-date">${review.date}</p>
+        </div>
+        <div class="review-body">
+          ${review.review}
+        </div>
+      </div>
+    `).join('')}
+  </div>
 
   </div>
 `;
