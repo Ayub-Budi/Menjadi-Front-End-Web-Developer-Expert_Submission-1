@@ -7,6 +7,9 @@ import LikeButtonInitiator from '../../utils/like-button-initiator';
 const Detail = {
   async render() {
     return `
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
     <div id="restos" class="list-detail"></div>
     <div id="detail-review"></div>
     <div id="likeButtonContainer"></div>
@@ -15,20 +18,28 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const resto = await RestaurantSource.detailResto(url.id);
     const restoContainer = document.querySelector('#restos');
-    restoContainer.innerHTML = createRestoDetailTemplate(resto.restaurant);
-    LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      resto: {
-        id: resto.restaurant.id,
-        rating: resto.restaurant.rating,
-        pictureId: resto.restaurant.pictureId,
-        name: resto.restaurant.name,
-        city: resto.restaurant.city,
-        description: resto.restaurant.description,
-      },
-    });
+    const loader = document.querySelector('.loader-wrapper');
+
+    try {
+      const resto = await RestaurantSource.detailResto(url.id);
+      restoContainer.innerHTML = createRestoDetailTemplate(resto.restaurant);
+      LikeButtonInitiator.init({
+        likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        resto: {
+          id: resto.restaurant.id,
+          rating: resto.restaurant.rating,
+          pictureId: resto.restaurant.pictureId,
+          name: resto.restaurant.name,
+          city: resto.restaurant.city,
+          description: resto.restaurant.description,
+        },
+      });
+      loader.style.display = 'none';
+    } catch (err) {
+      restoContainer.innerHTML = `Error: ${err}, swipe up to refresh!`;
+      loader.style.display = 'none';
+    }
 
     const btnSubmit = document.querySelector('#submit');
     const nameInput = document.querySelector('#name-review');
