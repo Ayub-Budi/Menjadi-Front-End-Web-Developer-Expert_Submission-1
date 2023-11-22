@@ -13,6 +13,10 @@ nav {
     align-items: center;
     color: rgb(167, 167, 236);
   }
+
+  nav .logo{
+    color: white;
+  }
   
   nav button {
     width: 50px;
@@ -28,13 +32,14 @@ nav {
   nav ul {
     display: flex;
     list-style: none;
-    width: 40%;
-    justify-content: space-between;
+    width: 70%;
+    flex-direction: row-reverse;
   }
   
   nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 32px;
   }
   
   nav a {

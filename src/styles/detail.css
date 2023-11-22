@@ -96,6 +96,10 @@ select {
   padding: 5px;
 }
 
+.hasil-review .review-item .review-header .review-name{
+  font-weight: bold;
+}
+
 /* like */
 .like {
   width: 55px;
