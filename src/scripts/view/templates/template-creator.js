@@ -4,12 +4,12 @@ const createRestoDetailTemplate = (resto) => `
     <div class="detail-resto">
       <div class="poster">
         <figure>
-          <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}"alt="${resto.name}" tabindex="0"/>
+          <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" crossorigin="anonymous" alt="${resto.name}" tabindex="0"/>
           <figcaption tabindex="0">${resto.categories.map((category) => `
           <span>${category.name}</span>
-        `).join('')}
-        ⭐️ ${resto.rating}</figcaption>
-          
+          `).join('')}
+          ⭐️ ${resto.rating}</figcaption>
+          <figcaption tabindex="0">Kota : ${resto.city}</figcaption>
           <figcaption tabindex="0">Alamat : ${resto.address}</figcaption>
 
         </figure>
@@ -44,32 +44,32 @@ const createRestoDetailTemplate = (resto) => `
       </div>
     </div>
 
-    <h2>Reviews</h2>
+    <h2 tabindex="0">Reviews</h2>
 
     <div>
       <div class="input-Review">
-        <form action="">
-          <label for="name">nama</label>
-          <input type="text" class="name-review" id="name-review" name="Nama" placeholder="Nama..">
+        <form action="" tabindex="0">
+          <label for="name" tabindex="0">nama</label>
+          <input type="text" class="name-review" tabindex="0" id="name-review" name="Nama" placeholder="Nama..">
 
-          <label for="review">Review</label>
-          <input type="text" class="review" id="review" name="Review" placeholder="Review..">
-          <input type="submit" id="submit" value="Submit" class="submit">
+          <label for="review" tabindex="0">Review</label>
+          <input type="text" class="review" tabindex="0" id="review" name="Review" placeholder="Review..">
+          <input type="submit" id="submit" tabindex="0" value="Submit" class="submit">
         </form>
       </div>
     </div>
 
-    <h2>Customer Reviews</h2>
+    <h2 tabindex="0">Customer Reviews</h2>
 
     <div class="hasil-review">
     ${resto.customerReviews.map((review) => `
-      <div class="review-item">
-        <div class="review-header">
-          <p class="review-name"><i title="restaurant" class="fa fa-user-circle" style="font-size:1.3em;"></i>&nbsp;${review.name}</p>
-          <p class="review-date">${review.date}</p>
+      <div class="review-item" tabindex="0">
+        <div class="review-header" tabindex="0">
+          <p class="review-name" tabindex="0"><i title="restaurant" class="fa fa-user-circle" style="font-size:1.3em;"></i>&nbsp;${review.name}</p>
+          <p class="review-date" tabindex="0">${review.date}</p>
         </div>
         <div class="review-body">
-          ${review.review}
+          <p tabindex="0">${review.review}</p>
         </div>
       </div>
     `).join('')}
@@ -85,7 +85,7 @@ const createRestoItemTemplate = (resto) => `
         <div class="poster">
 
         <p class="rating" tabindex="0">⭐️ ${resto.rating}</p>
-        <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}"alt="${resto.name}" tabindex="0" width="400" height="300"/>
+        <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" crossorigin="anonymous" alt="${resto.name}" tabindex="0" width="400" height="300"/>
         <p class="kota" tabindex="0">${resto.city}</p>
         </div>
         <div class="deskripsi">
