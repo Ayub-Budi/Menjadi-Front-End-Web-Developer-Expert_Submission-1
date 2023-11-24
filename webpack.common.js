@@ -47,14 +47,14 @@ module.exports = {
           urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev'),
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'themoviedb-api',
+            cacheName: 'therestodb-api',
           },
         },
         {
           urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/medium/'),
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'themoviedb-image-api',
+            cacheName: 'therestodb-image-api',
           },
         },
       ],

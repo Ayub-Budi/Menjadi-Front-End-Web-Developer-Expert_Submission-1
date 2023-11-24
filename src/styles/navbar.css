@@ -33,7 +33,7 @@ nav {
     display: flex;
     list-style: none;
     width: 70%;
-    flex-direction: row-reverse;
+    justify-content: flex-end;
   }
   
   nav ul li a {

@@ -11,7 +11,6 @@ const createRestoDetailTemplate = (resto) => `
           ⭐️ ${resto.rating}</figcaption>
           <figcaption tabindex="0">Kota : ${resto.city}</figcaption>
           <figcaption tabindex="0">Alamat : ${resto.address}</figcaption>
-
         </figure>
       </div>
 
