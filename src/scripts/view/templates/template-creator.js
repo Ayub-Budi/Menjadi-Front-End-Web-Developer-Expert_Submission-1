@@ -1,10 +1,11 @@
 const createRestoDetailTemplate = (resto) => `
   <div class="detail" id="${resto.id}">
-  <h2>${resto.name}</h2>
+  <h2 class="name">${resto.name}</h2>
     <div class="detail-resto">
       <div class="poster">
         <figure>
-          <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" crossorigin="anonymous" alt="${resto.name}" tabindex="0"/>
+          <img class="lazyload" src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" loading="lazy" crossorigin="anonymous" alt="${resto.name}" tabindex="0"/>
+
           <figcaption tabindex="0">${resto.categories.map((category) => `
           <span>${category.name}</span>
           `).join('')}
@@ -84,7 +85,8 @@ const createRestoItemTemplate = (resto) => `
         <div class="poster">
 
         <p class="rating" tabindex="0">⭐️ ${resto.rating}</p>
-        <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" crossorigin="anonymous" alt="${resto.name}" tabindex="0" width="400" height="300"/>
+        <img class="lazyload" src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" loading="lazy" crossorigin="anonymous" alt="${resto.name}" tabindex="0" width="400" height="300"/>
+
         <p class="kota" tabindex="0">${resto.city}</p>
         </div>
         <div class="deskripsi">

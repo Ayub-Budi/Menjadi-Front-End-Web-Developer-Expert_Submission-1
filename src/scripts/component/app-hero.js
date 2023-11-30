@@ -12,8 +12,6 @@ class AppHero extends HTMLElement {
     this.shadowDOM.innerHTML = `
           <style>
               * {
-                 
-                  
                   box-sizing: border-box;
               }
               :host{

@@ -20,6 +20,9 @@ const Like = {
     const loader = document.querySelector('.loader-wrapper');
 
     try {
+      if (restos.length === 0) {
+        restosContainer.innerHTML = 'tidak ada restaurant yang disukai';
+      }
       restos.forEach((resto) => {
         restosContainer.innerHTML += createRestoItemTemplate(resto);
       });
